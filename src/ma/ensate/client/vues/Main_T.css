@@ -1,0 +1,47 @@
+.button{
+    -fx-cursor:hand;
+}
+
+.button:hover{
+    -fx-background-color:#838586;
+}
+
+.dark-gray-background{
+    -fx-background-color: #464747;
+}
+
+.gray-background{
+    -fx-background-color: #636566;
+}
+
+.transparent-background{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-color : #ffffff;
+}
+
+.radius{
+    -fx-background-radius: 100px;
+}
+
+.light-gray-background{
+    -fx-background-color: #dadada;
+}
+.incomig-bubble{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 5px;
+}
+
+.outgoing-bubble{
+    -fx-background-color:#50C984;
+    -fx-background-radius: 5px;
+}
+
+
+.closebtn:hover{
+    -fx-background-color: #d11d1d;
+}
+
+
+.just_test{
+    -fx-background-color: #50C984;
+}

@@ -1,0 +1,9 @@
+salim=>salut adnan
+salim=>salut salim
+salim=>Bonjour c est encore adnan
+salim=>Bonjour C'est encore salim
+salim=>Bonsoir c'est adnan.Comment allez vous ?
+salim=>Oui bonsoir adnan! Je vais bien et toi ?
+salim=>On a un exam maintenant!
+salim=>Dernier message! c'est adnan
+salim=>Dernier message! C'est salim

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxWidth="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.ensate.client.controllers.SignUpController">
+   <center>
+      <AnchorPane prefHeight="533.0" prefWidth="539.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="353.0" layoutX="-2.0">
+               <image>
+                  <Image url="@../resources/images/icone.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="351.0" prefHeight="600.0" prefWidth="547.0" style="-fx-background-color: #17202A;">
+               <children>
+                  <Label layoutX="79.0" layoutY="25.0" prefHeight="52.0" prefWidth="132.0" text="sign up" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Tahoma Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="106.0" layoutY="77.0" prefHeight="6.0" prefWidth="78.0" style="-fx-background-color: #00FF00;" />
+                  <TextField fx:id="nom" cache="true" layoutX="70.0" layoutY="146.0" mouseTransparent="true" prefHeight="23.0" prefWidth="153.0" promptText="nom" style="-fx-background-color: #515A5A;">
+                     <effect>
+                        <InnerShadow height="1.74" radius="0.0" width="0.0">
+                           <color>
+                              <Color green="0.9824561476707458" blue="0.11461988091468811" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                     <font>
+                        <Font name="Tahoma" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <PasswordField fx:id="password" layoutX="70.0" layoutY="241.0" promptText="password" style="-fx-background-color: #515A5A;">
+                     <effect>
+                        <InnerShadow height="0.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="0.01666666753590107" green="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="prenom" layoutX="70.0" layoutY="193.0" promptText="prenom" style="-fx-background-color: #515A5A;">
+                     <effect>
+                        <InnerShadow height="1.54" radius="0.0" width="0.0">
+                           <color>
+                              <Color green="1.0" blue="0.03333333507180214" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="email" layoutX="70.0" layoutY="292.0" onAction="#verifier" promptText="email" style="-fx-background-color: #515A5A;">
+                     <effect>
+                        <InnerShadow height="3.48" radius="0.37" width="0.0">
+                           <color>
+                              <Color red="0.005902100820094347" green="0.9561403393745422" blue="0.005902100820094347" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="code" layoutX="70.0" layoutY="338.0" promptText="code de vérification" style="-fx-background-color: #515A5A;">
+                     <effect>
+                        <InnerShadow height="1.53" radius="0.0" width="0.0">
+                           <color>
+                              <Color green="1.0" blue="0.21666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </TextField>
+                  <Button fx:id="sign_up" layoutX="185.0" layoutY="412.0" mnemonicParsing="false" onAction="#sign_up" style="-fx-background-color: #00FF00;" text="sing up" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="17.52" radius="10.59" spread="0.11" width="26.84">
+                           <color>
+                              <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contact.main.gestioncontact.application.contactController">
+   <children>
+      <Text layoutX="30.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new contact" textAlignment="CENTER" wrappingWidth="149.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nom" layoutX="30.0" layoutY="98.0" promptText="nom name" />
+      <TextField fx:id="prenom" layoutX="30.0" layoutY="143.0" promptText="prenom name" />
+      <TextField fx:id="email" layoutX="30.0" layoutY="191.0" promptText="email" />
+      <TextField fx:id="ville" layoutX="30.0" layoutY="239.0" promptText="ville" />
+      <Button layoutX="62.0" layoutY="294.0" mnemonicParsing="false" onAction="#addItem" text="Add contact">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="contactsList" layoutX="359.0" layoutY="91.0" prefHeight="406.0" prefWidth="596.0" stylesheets="@listview.css" />
+      <Text layoutX="359.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom;prenom;email;ville" wrappingWidth="265.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search" layoutX="624.0" layoutY="50.0" onKeyTyped="#searchcontact" prefHeight="31.0" prefWidth="162.0" promptText="Search..." />
+      <Button fx:id="edit" layoutX="809.0" layoutY="47.0" mnemonicParsing="false" onAction="#editcontact" text="Edit">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete" layoutX="871.0" layoutY="47.0" mnemonicParsing="false" onAction="#deletecontact" text="Delete">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

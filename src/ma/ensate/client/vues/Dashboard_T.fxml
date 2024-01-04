@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.ensate.client.controllers.Controller_T">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <left>
+      <HBox prefHeight="600.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="80.0" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+               <children>
+                  <Pane prefHeight="246.0" prefWidth="92.0" />
+                  <Button fx:id="btnChat" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="35.0" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/messageicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnProfileManaging" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" onMousePressed="#handleButtonAction" prefHeight="32.0" prefWidth="46.0" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/profileicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnGroup" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/groupicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/settingicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" onMousePressed="#handleButtonAction" styleClass="dark-gray-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/logouticon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <ScrollPane prefHeight="687.0" prefWidth="280.0">
+               <content>
+                  <VBox prefHeight="801.0" prefWidth="286.0" styleClass="gray-background" stylesheets="@Main_T.css">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="203.0" stylesheets="@Main_T.css">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/searchicon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <TextField fx:id="searchTxtField" prefHeight="26.0" prefWidth="158.0" promptText="Search" styleClass="transparent-background" stylesheets="@Main_T.css">
+                                 <font>
+                                    <Font name="Ebrima" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="dark-gray-background" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                        </HBox>
+                        <Pane prefHeight="2.0" prefWidth="200.0" styleClass="dark-gray-background" stylesheets="@Main_T.css" />
+                        <VBox fx:id="contactBox" prefHeight="662.0" prefWidth="286.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox fx:id="main_form" prefHeight="729.0" prefWidth="994.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="15.0" prefWidth="1042.0">
+               <children>
+                  <Button fx:id="closebtn" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" onMousePressed="#handleButtonAction" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/close_windowicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="transparent-background" />
+                        <String fx:value="closebtn" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="main_form_head" alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="1042.0" visible="false">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="75.0" styleClass="transparent-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fx:id="profileImage_head" fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../server/resources/images/profileimage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="nameLabel_head" prefHeight="31.0" prefWidth="88.0" text="Adnan" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="24.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Circle fx:id="onlineSign" fill="#50c984" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label fx:id="OnlineLabel" prefHeight="31.0" prefWidth="83.0" text="Online" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Pane prefHeight="74.0" prefWidth="188.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnCall" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@Main.css">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/callicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnVideoCall" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@Main.css">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/videocallicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnMenu" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@Main.css">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/optionicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <ScrollPane fx:id="main_form_center_pane" prefHeight="580.0" prefWidth="1114.0" styleClass="transparent-background" stylesheets="@Main_T.css">
+               <content>
+                  <VBox fx:id="main_form_center" prefHeight="556.0" prefWidth="1143.0" visible="false">
+                     <children>
+                        <ListView fx:id="listView" prefHeight="556.0" prefWidth="1134.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox fx:id="main_form_bottom" alignment="BASELINE_LEFT" prefHeight="82.0" prefWidth="1154.0" visible="false">
+               <children>
+                  <Button fx:id="btnSticker" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/happyicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnAttach" mnemonicParsing="false" styleClass="transparent-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/attachicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="sendWritingLabel" prefHeight="42.0" prefWidth="998.0" promptText="Write someting" styleClass="transparent-background" stylesheets="@Main_T.css">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnSend" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" onMousePressed="#handleButtonAction" prefHeight="67.0" prefWidth="51.0" styleClass="transparent-background" stylesheets="@Main_T.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/sendicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <HBox prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
